@@ -411,24 +411,18 @@
                     <h3 class="footer form-title">Подпишитесь на рассылку</h3>
                     <form class="form">
                         <div class="form-field">
-                            <input type="email" name="mail" placeholder="E-mail" >
+                            <input type="email" name="mail" placeholder="E-mail">
+                            <button type="submit" class="form-button">Подписаться
+                                <svg class="form-svg" width="24px" height="24px">
+                                    <use href="./image/sprite.svg#icon-send"></use>
+                                </svg>
+                            
+                            </button>
                         </div>
-                        <button type="submit" class="form-button">Подписаться
-                            <svg class="form-svg" width="24px" height="24px">
-                                <use href="./image/sprite.svg#icon-send"></use>
-                            </svg>
                         
-                        </button>
-
                     </form>
-                    
 
                 </div>
-    
-                    
-                </div>
-
-
 
 
             </div>
@@ -441,12 +435,77 @@
 
         <div class="backdrop is-hidden" data-backdrop>
             <div class="modal">
+
                 <button data-close-modal class="modal-button" type="button">
                     <svg class="modal-icon" width="11px" height="11px">
                         <use href="./image/sprite.svg#icon-close"></use>
                     </svg>
                 </button>
-        
+
+
+
+
+                <form class="modal-form">
+                    <h2>Оставьте свои данные, мы вам перезвоним</h2>
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-input" name="name" id="name" />
+                        <svg class="form-icon" width="18px" height="18px">
+                            <use href="./image/sprite.svg#icon-person-black"></use>
+                        </svg>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="tel" class="form-label">Телефон</label>
+                        <input type="tel" class="form-input" name="tel" id="tel" />
+                        <svg class="form-icon" width="18px" height="18px">
+                            <use href="./image/sprite.svg#icon-phone-black"></use>
+                        </svg>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="mail" class="form-label">Почта</label>
+                        <input type="email" class="form-input" name="mail" id="mail" />
+                        <svg class="form-icon" width="18px" height="18px">
+                            <use href="./image/sprite.svg#icon-email-black"></use>
+                        </svg>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="comment" class="form-label">Комментарий</label>
+                        <textarea  class="text-input" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+                        
+                    </div>
+                    
+                    
+                    <div class="agreement-form">
+                        
+                        <label class="form-label">
+                            <input class="checkbox" type="checkbox" name="agreement" >
+                            <span class="modal-icon-svg"></span>
+                            Соглашаюсь с рассылкой и принимаю <a class="contract" href=""> Условия
+                                договора</a>
+                        </label>
+                    </div>
+
+
+
+
+                    
+      
+                    <button type="submit" class="send-button">Отправить</button>
+                    
+                        
+
+                
+                </form>
+
+
+
         
             </div>
         </div>
