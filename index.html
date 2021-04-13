@@ -59,7 +59,7 @@
             <section class="hero section overlay">
                 <div class="container ">
                     <h1 class="hero-title"> Эффективные решения </br>для вашего бизнеса</h1>
-                    <button  data-open-modal type="button" class="hero-button">Заказать услугу</button>
+                    <button  data-modal-open type="button" class="hero-button">Заказать услугу</button>
                 </div>
             </section>
             
@@ -433,10 +433,10 @@
         
 <!-- модалка -->
 
-        <div class="backdrop is-hidden" data-backdrop>
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
 
-                <button data-close-modal class="modal-button" type="button">
+                <button data-modal-close class="modal-button" type="button">
                     <svg class="modal-icon" width="11px" height="11px">
                         <use href="./image/sprite.svg#icon-close"></use>
                     </svg>
@@ -450,28 +450,34 @@
                     
                     <div class="form-group">
                         <label for="name" class="form-label">Имя</label>
-                        <input type="text" class="form-input" name="name" id="name" />
-                        <svg class="form-icon" width="18px" height="18px">
-                            <use href="./image/sprite.svg#icon-person-black"></use>
-                        </svg>
+                        <div>
+                            <input type="text" class="form-input" name="name" id="name" />
+                            <svg class="form-icon" width="18px" height="18px">
+                                <use href="./image/sprite.svg#icon-person-black"></use>
+                            </svg>
+                        </div>
                     </div>
                     
                     
                     <div class="form-group">
                         <label for="tel" class="form-label">Телефон</label>
-                        <input type="tel" class="form-input" name="tel" id="tel" />
-                        <svg class="form-icon" width="18px" height="18px">
-                            <use href="./image/sprite.svg#icon-phone-black"></use>
-                        </svg>
+                        <div>
+                            <input type="tel" class="form-input" name="tel" id="tel" />
+                            <svg class="form-icon" width="18px" height="18px">
+                                <use href="./image/sprite.svg#icon-phone-black"></use>
+                            </svg>
+                        </div>
                     </div>
                     
                     
                     <div class="form-group">
                         <label for="mail" class="form-label">Почта</label>
-                        <input type="email" class="form-input" name="mail" id="mail" />
-                        <svg class="form-icon" width="18px" height="18px">
-                            <use href="./image/sprite.svg#icon-email-black"></use>
-                        </svg>
+                        <div>
+                            <input type="email" class="form-input" name="mail" id="mail" />
+                            <svg class="form-icon" width="18px" height="18px">
+                                <use href="./image/sprite.svg#icon-email-black"></use>
+                            </svg>
+                        </div>
                     </div>
                     
                     
@@ -509,26 +515,7 @@
         
             </div>
         </div>
-    <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-
-        refs.backdrop.addEventListener("click", logBackdropClick);
-
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-        }
-
-        function logBackdropClick() {
-            console.log("Это клик в бекдроп");
-        }
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
